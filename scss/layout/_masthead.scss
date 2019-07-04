@@ -1,0 +1,37 @@
+$headerHeight: 600px;
+$personaImageScaleFactor: 2;
+$personaTopImageWidth: 200px * $personaImageScaleFactor;
+$personaTopImageHeight: 250px * $personaImageScaleFactor;
+$personaTopImageOffset: -68px * $personaImageScaleFactor;
+
+// Styling for the masthead
+header.masthead {
+  height: $headerHeight;
+  background-image: url("../img/night_bg.png");
+  background-repeat: repeat;
+  color: white;
+  text-align: center;
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .persona-top {
+    position: absolute;
+    z-index: 300;
+    bottom: $personaTopImageOffset;
+    left: 50%;
+    width: $personaTopImageWidth;
+    height: $personaTopImageHeight;
+    margin-left: -$personaTopImageWidth / 2;
+    background-image: url("../img/personas/sample/top_scaled.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+@media (min-width: 768px) {
+  header.masthead {
+  }
+}
